@@ -24,7 +24,7 @@
  * All of those functions - except the last one - are realy easy to use, self-explanatory and are
  * deliverd with a big innitial comment, which explains all needed arguments and the return values.
  *
- * This library is heavily based on AgenDAV caldav-client-v2.php by Jorge López Pérez <jorge@adobo.org> which
+ * This library is heavily based on AgenDAV caldav-client-v2.php by Jorge LÃ³pez PÃ©rez <jorge@adobo.org> which
  * again is heavily based on DAViCal caldav-client-v2.php by Andrew McMillan <andrew@mcmillan.net.nz>.
  * Actually, I hardly added any features. The main point of my work is to make everything straight
  * forward and easy to use. You can use simpleCalDAV whithout a deeper understanding of the
@@ -32,7 +32,7 @@
  *
  * Requirements of this library are
  *   - The php extension cURL ( http://www.php.net/manual/en/book.curl.php )
- *   - From Andrew’s Web Libraries: ( https://github.com/andrews-web-libraries/awl )
+ *   - From Andrewâ€™s Web Libraries: ( https://github.com/andrews-web-libraries/awl )
  *      - XMLDocument.php
  *      - XMLElement.php
  *      - AWLUtilities.php
@@ -169,7 +169,7 @@ class SimpleCalDAVClient {
 		if(!isset($this->client->calendar_url)) throw new Exception('No calendar selected. Try findCalendars() and setCalendar().');
 		
 		// Parse $cal for UID
-		if (! preg_match( '#^UID:(.*?)\r?\n?$#m', $cal, $matches ) ) { throw new Exception('Can\'t find UID in $cal'); }
+		if (! preg_match( '#UID:(.*?)\r?\n?$#m', $cal, $matches ) ) { throw new Exception('Can\'t find UID in $cal'); }
 		else { $uid = $matches[1]; }
 	
 		// Does $this->url.$uid.'.ics' already exist?
